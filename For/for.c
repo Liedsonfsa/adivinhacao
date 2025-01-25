@@ -1,14 +1,16 @@
 #include <stdio.h> // entrada e saida padrao
+#include <stdlib.h>
+#include <time.h>
 #define NUMERO_DE_TENTATIVAS 3 //numeros magicos sao numeros importantes para o nosso progama 
 
 int main()
 {
-
+    srand(time(NULL));
     printf("***********************************\n");
     printf("* Bem-vindo ao Jogo de Advinhacao *\n");
     printf("***********************************\n");
 
-    int numerosecreto = 42;
+    int numerosecreto = (rand() % 100) + 1;
     int chute; // int = numeiro inteiro
 
 // variavel i com o numero 1, condição de parada i <= 3, i++
